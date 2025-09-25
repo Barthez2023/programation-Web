@@ -103,7 +103,7 @@ body {
 }
 
 .presentationS{
-    padding: 20px 100px;
+    padding: 10px 100px 0px 100px;
     display: flex;             /* transforme le parent en flex */
     justify-content: space-between; /* info à gauche, outils à droite */
     align-items: center;       /* verticalement centré */
@@ -140,6 +140,659 @@ body {
     border-bottom-right-radius: 2px;
     padding-bottom: 10px;           /* espace entre texte et ligne */
     display: inline-block;          /* nécessaire pour ne pas étendre toute la largeur */
+}
 
+
+.container3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 100px 110px 100px;
+    background-color: hsl(200, 69%, 97%);
+    width: 100%;
+}
+
+.titre1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: bolder;
+    color: hsl(218, 46%, 10%);
+    margin-bottom: 50px;
+}
+.titre1>p{
+    font-size: 15px;
+}
+.blockimg>img{
+    width: 70px;
+    height: 50px;
+}
+
+.blockDetails{
+    display: flex;
+    gap: 30px;
+}
+.block{
+    flex: 1;                     /* chaque block prend la même place */
+    border: 1px solid lightgray; /* bordure grise claire */
+    border-radius: 20px;          /* bords arrondis */
+    padding: 20px;               /* espace intérieur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ombre pour effet de profondeur */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* transition pour l'animation */
+    /*width: 100%;
+    height: auto;*/      /* jai un probleme au niveau de ces deux instructions*/
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 300px;
+    width: 350px;
+    background-color: white;
+}
+.block>h1{
+    font-size: 20px;
+    color: hsl(218, 46%, 10%);
+}
+.block>p{
+    font-size: 12px;
+}
+.block>h3{
+    cursor: pointer;
+    color: hsl(217, 45%, 27%);
+    font-size: 15px;
+    /*border-bottom: 2px solid hsl(217, 45%, 27%);
+    display: inline-block;          /* nécessaire pour ne pas étendre toute la largeur *
+    */
+    text-decoration: underline;
+    display: inline-block;          /* nécessaire pour ne pas étendre toute la largeur */
+    text-underline-offset: 3px;     /* espace entre texte et soulignement */
+    text-decoration-color: hsl(217, 45%, 27%); /* couleur de la ligne */
+    text-decoration-thickness: 1px; /* épaisseur (CSS récent) */
+}
+.block:hover{
+    transform: translateY(-10px); /* déplace vers le haut */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ombre plus grande */
+    background-color: hsl(300, 7%, 97%); /* léger changement de couleur */
+}
+.server>h3{
+    margin-top: 65px;
+}
+.azur>h3{
+    margin-top: 80px;
+}
+.devellopeur>h3{
+    margin-top: 35px;
+}
+.express>h3{
+    margin-top: 50px;
+}
+.blockimg>img{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid hsl(206, 72%, 94%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container4{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding:30px 100px 50px 100px;
+    background-color: hsl(200, 69%, 97%);
 
 }
+.container4>p{
+    font-weight: bolder;
+}
+.cont4blockdetails{
+    display: flex;
+    gap: 20px;
+    padding: 30px 0;
+    /* background-color: yellow; */
+}
+
+.cont4block{
+    flex: 1;                     /* chaque block prend la même place */
+    border-radius: 20px;          /* bords arrondis */
+    padding: 20px;               /* espace intérieur */
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+    width:auto;
+    gap: 15px;
+}
+.cont4block>p{
+    color: hsl(218, 45%, 16%);
+    line-height: 1.5;
+}
+.titre2{
+    font-size: 12px;
+    font-weight: bolder;
+    display: flex;
+}
+.barre2{
+    height: 25px;
+    width: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: hsl(206, 100%, 42%);;
+}
+.cont4blockimg{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid hsl(206, 72%, 94%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cont4blockimg>img{
+    height: 20px;
+    width: 35px;
+}
+.cont4block>h3{
+    font-size: 15px;
+    color: hsl(217, 45%, 27%);
+    font-weight: bolder;
+    text-decoration: underline;
+    text-underline-offset: 2px;     /* espace entre texte et soulignement */
+}
+.cont4block>h3:hover{
+    cursor: pointer;
+}
+
+.container5{
+    margin: 0 5px 0 5px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 65vh;
+}
+.container5>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.descrption{
+    position: absolute;
+    top: 50%;      /* 50% depuis le haut du parent */
+    left: 50%;     /* 50% depuis la gauche du parent */
+    transform: translate(-50%, -50%); /* recale au centre exact */
+    color: white;
+    width: auto;   /* ou 100% si tu veux qu’il prenne toute la largeur */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.descrption>h3{
+    color: hsl(202, 67%, 82%);
+}
+.descrption>h1{
+    font-size: 35px;
+}
+.descrption>p{
+    line-height: 1.5;
+    font-size: 15px;
+}
+.descrption>button{
+    background-color: hsl(202, 67%, 82%);
+    color: black;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+}
+.descrption>button:hover{
+    background-color: hsl(200, 65%, 88%);
+}
+
+
+.container6{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding:100px 100px 50px 100px;
+    background-color: hsl(220, 69%, 97%);
+}
+.titre3{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.titre3>h1{
+    font-weight: bolder;
+    font-size: 3em;
+}
+.titre3>P{
+    font-size: 14PX
+}
+
+.bouton1{
+    /* background-color: yellow; */
+    padding: 20px 20px 30px 0px;
+    width:50vh;
+    display: flex;
+    gap: 20px;
+}
+.but{
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-weight: bold;
+    border: none;
+}
+.outil{
+    background-color: hsl(206, 100%, 30%);
+    color: white;
+}
+.pilote{
+       background-color: hsl(208, 43%, 70%);
+    color: black;
+}
+.pilote:hover{
+    background-color: hsl(208, 21%, 53%);
+}
+
+.sqlservice{
+    display: flex;
+    gap: 30px;
+}
+.service{
+    height: 380px;
+    width: 400px;
+}
+.service>p{
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.management>h3{
+    margin-top: 110px;
+}
+.Tools>h3{
+    margin-top: 80px;
+}
+
+.raport>h3{
+    margin-top: 130px;
+}
+
+.assistance>h3{
+    margin-top: 50px;
+}
+.migration>h3{
+    margin-top: 50px;
+}
+
+.boutton2{
+    display: flex;
+    gap: 20px;
+    margin: 50px 100px 0px 0px;
+}
+.tooltip{
+    position: relative;
+   display: inline-block;
+}
+.tooltip>button{
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bolder;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.tooltip .precedente{
+    border: 2px solid hsl(229, 26%, 83%);
+    background-color: hsl(220, 69%, 97%);
+    color: hsl(229, 26%, 83%);
+}
+.tooltip .suivante{
+    background-color:hsl(220, 69%, 97%);
+    border: 2px solid hsl(217, 45%, 30%);
+    color: hsl(217, 45%, 30%);
+}
+
+
+.tooltip .tooltiptext {
+    visibility: hidden;           /* caché par défaut */
+    width: 150px;
+    color: black;
+    text-align: center;
+    padding: 3px;
+    border: 2px solid black;
+    font-size: 13px;
+    background-color: white;
+
+
+    /* Positionner au-dessus du bouton */
+    position: absolute;
+    bottom: 10%;   /* place le texte au-dessus */
+    left: 70%;
+    /* transform: translateX(-50%); */
+    
+    /* petite flèche */
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 2;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.container7{
+    display: flex;
+    gap: 20px;
+    width: 88%;
+    /* padding:100px 100px 50px 100px; */
+    margin: 100px 0 0 100px;
+    height: auto;
+    background-color:white;
+    border: 2px solid lightgray; /* bordure grise claire */
+    border-radius: 20px;          /* bords arrondis */
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1); /* ombre pour effet de profondeur */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* transition pour l'animation */
+}
+.container7:hover{
+    transform: translateY(-10px); /* déplace vers le haut */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ombre plus grande */
+    background-color: hsl(300, 7%, 97%); /* léger changement de couleur */
+}
+.migration{
+    padding: 30px 15px 30px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* .migration>p{
+    color: hsl(206, 100%, 30%); 
+    font-weight: bolder; 
+} */
+.innovation{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.innovation>h1{
+    font-size: 2.75em;
+    font-weight: normal;
+}
+.innovation>p{
+   line-height: 1.5;
+}
+.migration>button{
+    background-color: hsl(218, 100%, 45%);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+    width: 230px;
+}
+.migration>button:hover{
+    background-color: hsl(206, 100%, 38%);
+    cursor: pointer;
+}
+.affiche{
+    height: 550px;
+    width: 650px;
+    padding: 10px;
+}
+.affiche>img{
+    height: 530px;
+    width: 630px;
+    border-radius: 15px;
+    display: block; /* ou inline-block */
+}
+.Grandcontainer{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /*justify-content: center;*/
+    width: 100vW;
+    /*align-items: center;*/
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: hsl(200, 69%, 97%);
+    padding-bottom: 100px;
+}
+
+.container8{
+    display: flex;
+    gap: 20px;
+    /* background-color: blue; */
+    width: 88%;
+    margin: 30px 0 0 100px;
+    height: auto;
+    justify-content: space-between;
+}
+.image2>img{
+    height: 220px;
+    width: 420px;
+    border-radius: 15px;
+    display: block; /* ou inline-block */
+    margin-bottom: 10px;
+}
+.block1{
+    flex: 1;                     /* chaque block prend la même place */
+    border-radius: 20px;          /* bords arrondis */
+    padding: 10px;               /* espace intérieur */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ombre pour effet de profondeur */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* transition pour l'animation */
+}
+.block1:hover{
+    transform: translateY(-10px); /* déplace vers le haut */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ombre plus grande */
+    background-color: hsl(300, 7%, 97%); /* léger changement de couleur */
+}
+.documentation{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+.documentation p:first-of-type{
+    color: hsl(206, 100%, 30%);
+    font-weight: bolder;
+}
+.documentation p:last-of-type{
+    line-height: 1.5;
+    font-size: 18px;
+}
+.documentation>h1{
+    font-size: 1.5em;
+}
+
+.boutton5>button{
+    background-color: hsl(206, 100%, 45%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.boutton5>span{
+    font-size: 15px;
+    font-weight: bolder;
+    color: hsl(217, 45%, 27%);
+    cursor: pointer;
+}
+.suivre{
+    display: flex;
+    gap : 20px;
+    font-size: 18px;
+    padding: 50px 0px 15px 100px ;
+    background-color: white;
+}
+.suivre>img{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+.suivre>img:hover{
+    transform: scale(1.5) translateY(-3px) rotate(45deg);
+    /*transform: skew(20deg, 10deg); 
+    20° d’inclinaison horizontale, 10° verticale */
+    transition: transform 0.3s ease;
+}
+.suivre .youtube{
+    height: 25px;
+    width: 55px;
+}   
+
+footer{
+    flex-shrink: 0;
+    /* border-top: 1px dashed lightgray; */
+    width: 100%;
+    background-color: hsl(0, 0%, 95%);
+    color: black;
+}
+.piedPage{
+    width: 100%;
+    margin: 0,auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px 0px 100px;
+    gap: 20px;
+}
+.blockpied{
+    flex: 1;                     /* chaque block prend la même place */
+}
+.blockpied ul{
+    list-style-type: none;
+    font-size: 11px;
+}
+.blockpied a{
+    text-decoration: none;
+    color: hsl(0, 0%, 38%);
+}
+.blockpied a:hover{
+    color: hsl(0, 0%, 9%);
+    text-decoration: underline;
+    transition: color 0.5s ease;
+}
+.blockpied>h3{
+    padding-bottom: 20px;
+    color: hsl(0, 0%, 38%);
+}
+.blockpied>ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.langue>img{
+    height: 15px;
+    width: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.confidentialite>img{
+    height: 15px;
+    width: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.langue{
+    display : flex;
+    align-items: center;
+}
+.confidentialite{
+    display : flex;
+    align-items: center;
+}
+.langueConfidentialite{
+    display: flex;
+    padding: 50px 100px 20px 100px;
+    gap: 20px;
+
+}
+.langueConfidentialite a{
+    font-size: 11px;
+    text-decoration: none;
+    color : hsl(0, 0%, 38%);
+}
+
+.langueConfidentialite a:hover{
+    color: hsl(0, 0%, 9%);
+    text-decoration: underline;
+    transition: color 0.5s ease;
+}
+
+.contact{
+    display: flex;
+    gap: 25px;
+    padding: 0px 100px 20px 78px;
+    font-size: 11px;
+}
+.contact a{
+    text-decoration: none;
+    color: hsl(0, 0%, 38%);
+}
+.contact a:hover{
+    color: hsl(0, 0%, 9%);
+    text-decoration: underline;
+    transition: color 0.5s ease;
+}
+.acces{
+    display: flex;
+    gap: 30px;
+    padding: 0px 100px 50px 100px;
+    font-size: 11px;
+}
+.acces a{
+    text-decoration: none;
+    color: hsl(0, 0%, 38%);
+}
+.acces a:hover{
+    color: hsl(0, 0%, 9%);
+    text-decoration: underline;
+    transition: color 0.5s ease;
+}
+
+.espace{
+    padding: 20px;
+    background-color: hsl(0, 0%, 97%);
+}
+
+
