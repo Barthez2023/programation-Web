@@ -140,6 +140,86 @@
     date_precise.setSeconds(0); //changer les secondes a 0
     alert("Date precise modifiee : "+date_precise);
 
+    var x=675.25412
+    var y=Math.round(x); //methode round pour arrondir un nombre a l'entier le plus proche
+    alert("Nombre avant arrondi : "+x + "\n" + "Nombre apres arrondi : "+y);
+    var a=5.789
+    var b=Math.floor(a); //methode floor pour arrondir un nombre a l'entier inferieur
+    alert("Nombre avant arrondi : "+a + "\n" + "Nombre apres arrondi : "+b);
+    var c=5.123 
+    var d=Math.ceil(c); //methode ceil pour arrondir un nombre a l'entier superieur
+    alert("Nombre avant arrondi : "+c + "\n" + "Nombre apres arrondi : "+d);
+    var e=16
+    var f=Math.sqrt(e); //methode sqrt pour calculer la racine carree d'un nombre
+    alert("Racine carree de "+e+" est : "+f);
+    var g=3
+    var h=Math.pow(g,3); //methode pow pour calculer la puissance d'un nombre ici 3 puissance 3
+    alert(g+" puissance 3 est : "+h);   
+    var min=Math.min(5,10,2,8); //methode min pour obtenir le plus petit nombre parmi une liste de nombres
+    var max=Math.max(5,10,2,8); //methode max pour obtenir le plus grand nombre parmi une liste de nombres
+    alert("Plus petit nombre est : "+min + "\n" + "Plus grand nombre est : "+max);
+    var random=Math.random(); //methode random pour generer un nombre aleatoire entre   0 et 1
+    alert("Nombre aleatoire entre 0 et 1 : "+random);
+    var random_entre_1_et_100=Math.floor(Math.random()*100)+1; //generer un nombre aleatoire entre 1 et 100
+    alert("Nombre aleatoire entre 1 et 100 : "+random_entre_1_et_100);
+
+
+    //les fonction anonymes en javascript
+    var addition=function(a,b){ //fonction anonyme affectee a une variable
+        return a+b;
+    }
+    var resultat=addition(5,10);
+    alert("Resultat de l'addition : "+resultat);
+
+    //les fonctions fleche en javascript
+    var multiplication=(a,b)=>{ //fonction fleche affectee a une variable 
+        return a*b;
+    }
+    var resultat_mult=multiplication(5,10);
+    alert("Resultat de la multiplication : "+resultat_mult);
+
+    //les fonctions fleche avec un seul parametre
+    var carre=x=>{ //fonction fleche avec un seul parametre
+        return x*x;
+    }   
+    var resultat_carre=carre(5);
+    alert("Resultat du carre : "+resultat_carre);
+
+    //les fonctions fleche avec un seul parametre et une seule instruction
+    var double=x=>x*2; //fonction fleche avec un seul parametre et une seule instruction
+    var resultat_double=double(5);
+    alert("Resultat du double : "+resultat_double);
+
+
+
+    //prompt pour demander une saisie a l'utilisateur
+    var nom_utilisateur=prompt("Entrez votre nom :");
+
+    //les fonction auto invoquees en javascript
+    (function(nom){
+        alert("Bonjour "+nom);
+    })(nom_utilisateur); //appel de la fonction auto invoquee avec le nom saisi par l'utilisateur
+
+    // les closures
+    function computer(){
+        var i=0;
+
+        return function () {
+            return i+1;
+        }
+    }
+
+    var plush=Personne();
+    var autre_Instance=Personne();
+    alert("Premier tour :"+ plush()+
+          "\nDeuxime tour :"+ plush()+
+          "\nPremier tour autre_Instance tour :"+ plush()+
+          "\nTroisieme tour :"+ plush()
+        )
+    //chaque appel à Personne() crée une nouvelle instance indépendante avec son propre état (ici un compteur).    
+
+
+
 
 
 </script>
