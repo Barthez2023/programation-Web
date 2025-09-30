@@ -1,0 +1,233 @@
+*{
+    box-sizing: border-box;
+    background-origin: content-box;
+    margin: 0;
+    padding: 0;
+}
+body { 
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100vW;
+    /* height: 100vh; */
+    height: 1120px;              
+    font-family: 'Times New Roman', Times,sans-serif;
+    font-size: 16px;
+}
+.presentation{
+    margin: 0 5px 0 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background-image: url("img1.png");
+    position: relative;
+}
+.head{
+    color: white;
+    width: auto;   /* ou 100% si tu veux qu’il prenne toute la largeur */
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 150px 10px 150px;
+}
+.head>img{
+    height: 80px;
+    width: 200px;
+}
+.selection{
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+}
+.langues{
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid hsl(60, 1%, 38%);
+    border-radius: 5px;
+    background: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 17px;
+
+    /*-webkit-appearance: none;  * Chrome / Safari */
+    /*-moz-appearance: none;     * Firefox */
+    /*appearance: none;          * Standard */
+}
+/* Optionnel : enlever le contour bleu par défaut */
+.langues:focus {
+  outline: none;
+}
+
+/* Style des options dans la liste déroulante */
+.langues option {
+  background-color: white; /* fond noir */
+  color: black;              /* texte blanc */
+  padding: 2px;
+}
+
+/* Quand un élément est survolé */
+.langues option:hover {
+   background-color: hsl(0, 1%, 62%);
+   color: red !important;
+}
+
+.sign{
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(357, 92%, 47%);
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+.sign:hover{
+    background-color: hsl(357, 84%, 41%);
+}
+.soucription{
+    position: absolute;
+    top: 60%;     /*50% depuis le haut du parent */
+    left: 50%;      /*50% depuis la gauche du parent */
+    transform: translate(-50%, -50%);  /*recale au centre exact */
+    color: white;
+    width: auto;   /* ou 100% si tu veux qu’il prenne toute la largeur */
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+    width: 630px;
+    height: 400px;
+    text-align: center;
+    line-height: 1;
+    gap: 10px;
+}
+.soucription>h1{
+    font-size: 70px;
+    padding: 10px;
+}
+.soucription>p{
+    font-size: 20px;
+    padding-left: 30px;
+}
+.soucription p:first-of-type{
+   margin-bottom: 25px;
+}
+.start input{
+    width: 350px;
+    height: 50px;
+    position: absolute;
+    left: 5%;
+    top: 85%;
+    border: 1px solid hsl(0, 0%, 38%);
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 20%,0.5);
+}
+.start input::placeholder{
+    color: hsl(0, 0%, 73%);
+    font-size: 17px;
+    padding-left: 15px;
+}
+.start button{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    right: 5%;
+    top: 85%;
+    font-size: 25px;
+    background-color: hsl(357, 92%, 47%);
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.start button:hover{
+   background-color: hsl(357, 84%, 41%);
+}
+.film{
+    display: flex;
+    gap: 40px;
+}
+.film>img{
+    width: 230px;
+    height: 320px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* transition douce */
+}
+.film img:hover{
+    transform: scale(1.05); /* agrandit de 5% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ombre plus grande */
+}
+.trending{
+    background-color: black;
+    height: 450px;
+    width: 100%;
+    color: white;
+    padding-left: 130px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+.nbr{
+    color: black;
+    font-size: 100px;        /* taille du nombre */
+    -webkit-text-stroke: 2px white; /* contour noir de 2px */
+    font-weight: bold;         /* pour un effet plus visible */
+    font-family: Arial, Helvetica, sans-serif;
+    transform: scaleX(1.2); /* 1.1 = deux fois plus large */
+    display: inline-block; /* nécessaire pour que transform s'applique correctement */
+}
+.nombre1{
+    position: absolute;
+    top: 300px;
+    left: 100px;
+}
+.nombre2{
+    position: absolute;
+    top: 300px;
+    left: 380px;
+}
+.nombre3{
+    position: absolute;
+    top: 300px;
+    left: 630px;
+}
+
+.nombre4{
+    position: absolute;
+    top: 300px;
+    left: 920px;
+}
+
+.nombre5{
+    position: absolute;
+    top: 300px;
+    left: 1200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*height: 100vh; 
+    height: 1120px; */

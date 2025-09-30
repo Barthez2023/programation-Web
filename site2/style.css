@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    background-origin: content-box;
+    margin: 0;
+    padding: 0;
+}
+body { 
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /*justify-content: center;*/
+    width: 100vW;
+    /*align-items: center;*/
+    height: 100vh;
+    font-family: 'Times New Roman', Times,sans-serif;
+    font-size: 16px;
+}
+.presentation{
+    margin: 0 5px 0 5px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 87vh;
+}
+.image{
+    width: 100%;
+    /* height: 550px; */
+    height: 100vh;
+}
+.image>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.head{
+    position: absolute;
+    top: 10%;     
+    left: 0%;      
+    /*transform: translate(-50%, -50%);  recale au centre exact */
+    color: white;
+    width: auto;   /* ou 100% si tu veux qu’il prenne toute la largeur */
+    display: flex;
+    justify-content: space-between;
+}
+.soucription{
+    position: absolute;
+    top: 50%;     /*50% depuis le haut du parent */
+    left: 50%;      /*50% depuis la gauche du parent */
+    transform: translate(-50%, -50%);  /*recale au centre exact */
+    color: white;
+    width: auto;   /* ou 100% si tu veux qu’il prenne toute la largeur */
+    display: flex;
+    flex-direction: column;
+}
+
+
