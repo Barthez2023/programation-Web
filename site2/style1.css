@@ -15,8 +15,6 @@ body {
     font-size: 16px;
 }
 .presentation{
-    margin: 0 5px 0 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 100vh;
     color: white;
@@ -95,7 +93,7 @@ body {
     width: auto;   /* ou 100% si tu veux qu’il prenne toute la largeur */
     display: flex;
     flex-direction: column;
-    /* background-color: blue; */
+    background-color: blue;
     width: 630px;
     height: 400px;
     text-align: center;
@@ -162,7 +160,7 @@ body {
 }
 .trending{
     background-color: black;
-    height: 450px;
+    height: 100vh;
     width: 100%;
     color: white;
     padding-left: 130px;
