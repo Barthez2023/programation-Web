@@ -3,18 +3,20 @@
     background-origin: content-box;
     margin: 0;
     padding: 0;
+    
 }
 body { 
     display: flex;
     flex-direction: column;
     flex: 1;
-    width: 100vW;
-    /* height: 100vh; */
-    height: 1120px;              
+    width: 100%;
+    height: auto;
     font-family: 'Times New Roman', Times,sans-serif;
     font-size: 16px;
 }
 .presentation{
+    /* margin: 0 5px 0 5px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 100vh;
     color: white;
@@ -93,7 +95,7 @@ body {
     width: auto;   /* ou 100% si tu veux qu’il prenne toute la largeur */
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    /* background-color: blue; */
     width: 630px;
     height: 400px;
     text-align: center;
@@ -160,7 +162,7 @@ body {
 }
 .trending{
     background-color: black;
-    height: 100vh;
+    height: 450px;
     width: 100%;
     color: white;
     padding-left: 130px;
@@ -206,6 +208,98 @@ body {
     top: 300px;
     left: 1200px;
 }
+
+.recommandation{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 50px 50px 130px;
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+.recommandation p{
+    font-size: 30px;
+    color: white;
+}
+.diversites{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+}
+.block{
+    background: hsl(229, 46%, 18%);
+    background-image: linear-gradient(
+        -50deg,
+        hsla(332, 40%, 9%, 1),   /* couleur opaque */
+        hsla(332, 40%, 9%, 0.25) /* même couleur mais 45% opaque */
+    );
+    flex: 1;
+    height: 250px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+
+}
+.block h1{
+    font-size: 28px;
+    color: white;
+    font-weight: bolder;
+}
+.block p{
+    font-size: 20px;
+    color: hsl(249, 5%, 74%);
+}
+.degrade1{
+    position: absolute;
+    top: 65%;
+    left: 18%;
+}
+.degrade2{
+    position: absolute;
+    top: 65%;
+    left: 43%;
+}
+.degrade3{
+    position: absolute;
+    top: 65%;
+    left: 68%;
+}
+.degrade4{
+    position: absolute;
+    top: 65%;
+    left: 94%;
+}
+
+.questions{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 50px 50px 130px;
+    margin-bottom: 20px;
+    background-color: blue;
+}
+.hiddenAnswer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.answer{
+    background-color: brown;
+    padding: 30px;
+}
+.block_header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 10px 0;
+}
+
+
+
 
 
 
