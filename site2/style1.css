@@ -278,28 +278,142 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 50px 50px 50px 130px;
-    margin-bottom: 20px;
-    background-color: blue;
+    padding: 50px 50px 100px 130px;
+    background-color: black;
+    color: white;
 }
 .hiddenAnswer{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 8px;
 }
 
 .answer{
-    background-color: brown;
-    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 .block_header{
     display: flex;
     justify-content: space-between;
-    padding: 0 0 10px 0;
+    background-color: hsl(0, 0%, 25%);
+    padding: 30px 30px 0px 30px;
+    cursor: pointer;
+    transition: all 0.5s ease; /* fluide */
+}
+.block_header h3{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.block_header p{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+.block_header:hover{
+    background-color: hsl(0, 0%, 35%);
+}
+.block_content{
+    font-size: 30px;
+    background-color: hsl(0, 0%, 25%);
+    padding: 30px 30px 30px 30px;
+    display: none;
 }
 
+.watch{
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    gap: 10px;
+    color: white;
+    font-size: 20px;
+}
+.start1 input{
+    width: 600px;
+    height: 50px;
+    border: 1px solid hsl(0, 0%, 38%);
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 20%,0.5);
+}
+.start1 input::placeholder{
+    color: hsl(0, 0%, 73%);
+    font-size: 17px;
+    padding-left: 15px;
+}
+.start1 button{
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    background-color: hsl(357, 92%, 47%);
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.start1 button:hover{
+   background-color: hsl(357, 84%, 41%);
+}
 
-
+footer{
+    flex-shrink: 0;
+    /* border-top: 1px dashed lightgray; */
+    width: 100%;
+    background-color: black;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 100px 150px 130px;
+    font-size: 20px;
+}
+footer a{
+    color: hsl(0, 0%, 70%);
+}
+.piedPage{
+    width: 100%;
+    margin: 0,auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.blockpied{
+    flex: 1;                     /* chaque block prend la même place */
+}
+.blockpied ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.blockpied a{
+    color: hsl(0, 0%, 70%);
+    cursor: pointer;
+    font-size: 17px;
+}
+.fin{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 50px 0 0 0;
+    font-size: 17px;
+}
+.fin a{
+    color: hsl(215, 89%, 61%);
+    cursor: pointer;
+}
+.fin p:first-of-type{
+    color: hsl(0, 0%, 70%);
+}
+.fin p:last-of-type{
+    color: hsl(0, 0%, 49%);
+}
 
 
 
