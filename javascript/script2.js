@@ -39,3 +39,7 @@ alert("Contenu recuperer avec innerHTML :\n"+titre2+
     "\n contenu recupere avec innerTexte :\n"+titre3+
     "\n contenu recupere avec textContent:\n"+titre4
 );
+alert("Contenu recuperer avec innerHTML :\n"+titre2+
+    "\n contenu recupere avec innerTexte :\n"+titre3+
+    "\n contenu recupere avec textContent:\n"+titre4
+);
