@@ -32,3 +32,23 @@ document.body.appendChild(new_paragraphe)
 
 var avant=document.querySelector(".para");
 document.body.insertBefore(new_paragraphe,avant);/*permet de mettre un element a une position precise dans le body*/
+
+/*Comment ce deplacer dans les noeud en javascript*/
+// parent Node permet d'acceder au propriete parent
+var p=document.querySelector(".paraf");   //selectionne le premier paragraphe
+var div= p.parentNode;                    //permet d'acceder au parent de notre element p
+div.style.color='orange'
+
+/*var b=document.body;
+var div1=b.childNode[4];
+var p1=div1.childNode[1];
+var pTexte=p1.childNode[0].nodeValue;
+alert(pTexte);*/
+
+var modification = document.getElementById("modif");
+//console.log(modification);
+modification.onclick = function() {
+    this.innerHTML = "Changement effectué"; // correction orthographique
+    this.style.color = "green";
+    this.style.transition = "color 0.3s ease"; // effet doux
+};
