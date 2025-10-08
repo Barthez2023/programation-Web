@@ -52,3 +52,55 @@ modification.onclick = function() {
     this.style.color = "green";
     this.style.transition = "color 0.3s ease"; // effet doux
 };
+
+
+/*Utilisation de l'outil  addEvenListener   :  cela permet de liee du code a un evenement*/
+
+var p1=document.querySelector('.event1');
+p1.addEventListener('click',textchange);
+function textchange(){
+    this.innerHTML='<strong>Bravo!</strong>';
+    this.style.color='blue';
+}
+
+
+/*utilisation des fonctions anonymes*/
+var p2=document.querySelector('.event2');
+p2.addEventListener('click',function(){
+    this.innerHTML='<strong>Binvenue!</strong>';
+    this.style.color='pink';  
+});
+
+
+// uilisation de plusieurs evenement avec addEven Listener
+var p3=document.querySelector('.event3');
+p3.addEventListener('mouseover',fonction1);
+p3.addEventListener('mouseout',reset1);
+p3.addEventListener('mousedown',fonction2);
+p3.addEventListener("mouseup",reset2);
+
+function fonction1(){
+    this.innerHTML='Cliquez sur moi maintenant';
+    this.style.backgroundColor='orange';
+}
+
+function reset1(){
+    this.innerHTML='Passez sur moi';
+    this.style.backgroundColor='';
+}
+
+function fonction2(){
+    this.innerHTML='Bravo!';
+    this.style.color='#26C';
+    this.style.fontSize='24px';
+    this.style.fontWeight='bloder';
+}
+
+function reset2(){
+    this.innerHTML='Passez sur moi';
+    this.style.color='';
+    this.style.fontSize='';
+    this.style.fontWeight='';
+}
+
+
