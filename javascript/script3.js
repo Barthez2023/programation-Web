@@ -1,3 +1,4 @@
+//DOM: Document Object Model
 /*Modifier du contenu HTML en JavaScript*/
 var titredocument=document.getElementById("gros_titre");
 var titre_text=titredocument.innerHTML;
@@ -224,6 +225,21 @@ function TextP(e) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*BOM: Browser Object Model permet d'acceder au nivigateur nous allons utiliser l'objet windows qui represente la 
 fenetre du navigateur(on ne precise pas windows lorsque on utilise les fonction qui lui sont lie.Comme exemple)
 alert()  est une fonction windows.  windows.alert()=alert() ,windows.document.getElementById=document.getElementById car ""windows est explicite*/
@@ -337,7 +353,34 @@ function Fchange() {
 //la difference  entre recharge et replace est que avec replace on a la possibilite de revenir en arriere avec replace la page est completement modifie.
 
 
-/**/
+/*L'objet History :qui appartient a l'objet windows .Cet objet vas nous permettre de ce depalcer dans l'historique de nos visiteurs*/
+var p_8=document.getElementById("p8");
+const precedent=document.getElementById("precedent");
+const suivant=document.getElementById("suivant");
+const specifique=document.getElementById("specifique");
+
+precedent.addEventListener('click',farriere);
+suivant.addEventListener('click',Favant);
+specifique.addEventListener('click',Fspecifique);
+
+function farriere() {
+    history.back();
+}
+
+function Favant() {
+    history.forward();
+}
+
+function Fspecifique() {
+    history.go(-3);        //retourner les 3 dernieres pages visite par l'utilisateur
+}
+
+var histo=history.length;
+p_8.innerHTML='URLs :' +histo;
+
+
+
+
 
 
 
