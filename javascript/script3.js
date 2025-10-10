@@ -104,3 +104,240 @@ function reset2(){
 }
 
 
+/*Propagation des evenements  :permet de caracteriser l'odre dans lequel les differents evenements vont se declencher*/
+// cela veut dire que si exemple on a un paragraphe contenue dans une div et on affecte a deux evenement click a notre div et notre paragraphe lorasque l'utilisateur vas cliquer 
+//sur le paragraphe les deux evenements vont se declanche car le paragraphe est  dans le div.La question est de savoir dans quel ordre vont se declenche les evenements lorque l'utilisateur clique
+
+
+var div=document.getElementById('propagation');
+var para=document.querySelector('p');
+
+div.addEventListener('click',MessageDiv);
+div.addEventListener('click',MessageP);
+
+function MessageDiv() {
+    alert('Evenement du Div');
+}
+function MessageP() {
+    alert('Evenement  du paragraphe');
+}
+
+
+//Accedation aux variables html
+
+var div_1=document.getElementById('div1');
+var p_1=document.getElementById("p1");
+var div_2=document.getElementById('div2');
+var p_2=document.getElementById("p2");
+var div_3=document.getElementById('div3');
+var p_3=document.getElementById("p3");
+var strong=document.querySelectorAll('strong')
+var body_3=document.body;
+
+
+div_1.style.border='2px solid red';
+div_2.style.border='2px solid orange';
+div_3.style.border='2px solid yellow';
+div_1.style.padding='20px';
+div_1.style.margin='10px';
+div_2.style.padding='20px';
+div_2.style.margin='10px';
+div_3.style.padding='20px';
+div_3.style.margin='10px';
+p_1.style.backgroundColor='green';
+p_2.style.backgroundColor='green';
+p_3.style.backgroundColor='green';
+
+//phase de bouillonnement utilisee pour div1 et p1 les evenements se declenche de l'element le plus profond vers le haut (p->div->body...)
+div_1.addEventListener('click',MessageDiv_1);
+p_1.addEventListener('click',MessageP_1);
+function MessageDiv_1() {alert('Evenement du Div 1');}
+function MessageP_1() {alert('Evenement  du paragraphe p1');}
+
+//phase de capture pour div 2 et p2 les evenements se declenche de l'element le moins profond vers les elements les plus bat (document->body->div->p...)
+div_2.addEventListener('click',MessageDiv_2,true);
+p_2.addEventListener('click',MessageP_2,true);
+function MessageDiv_2() {alert('Evenement du Div 2');}
+function MessageP_2() {alert('Evenement  du paragraphe p2');}
+
+//phase de bouillennement et de capture
+p_3.addEventListener('click',CP1,true);
+strong[1].addEventListener('click',CS,true);
+function CP1() {alert('Capture paragraphe');};
+function CS() {alert('Capture Strong');};
+
+div_3.addEventListener('click',BD1);
+body_3.addEventListener('click',BB);
+function BD1() {alert('Bouillonnement div');};
+function BB() {alert('Bouillonnement body');};
+
+
+
+/*Etude de l(objet Event*/
+//Event contient des proprietes et des methodes qui vont nous informe sur le contexte de l'element declenche.Cet object n'est accessible que pendant le declenchement d'un evenement il faut donc y acceder 
+//au sein de la fonction qui vas servir d'executer une action lors de l'execution de l'evenement.
+
+//propriete target: elle retourne le type de l'element qui as declenche l'evenement
+//Propriete  current target :va retourner le type d'element qui porte le gestionnaire de l'element declenché.
+//type :retourne le type d'element qui a ete declenche
+
+var div_4=document.getElementById('div4');
+var p_4=document.getElementById("p4");
+div_4.style.backgroundColor='gray';
+div_4.style.color='white';
+div_4.style.padding='10px';
+div_4.style.margin='10px';
+
+div_4.addEventListener('click',message1);
+function message1(event) {
+    this.innerHTML='Element declencheur :'+event.target+
+    '<br>Element portant l\'evenement: '+event.currentTarget+
+    '<br>Le type d\'declenche est :'+event.type;
+}
+
+
+//on peut aussi arrter la propagation d'un evenement
+var div_5=document.getElementById('div5');
+var p_5=document.getElementById("p5");
+div_5.style.backgroundColor='orange';
+div_5.style.padding='10px';
+div_5.style.margin='10px';
+div_5.style.color='white';
+
+div_5.addEventListener('click',TextD,true);
+p_5.addEventListener('click',TextP,true);
+/*function TextD(e) {
+    alert('Stop a la propagation');
+    e.stopPropagation();  //permet de stopper la propagation
+}
+function TextP(e) {
+    alert('Ceci ne s\'affichera pas');
+}*/
+
+
+function TextD(e) {
+    e.preventDefault();  //stopper un element cible mais permet au autre de continuer la propagation (ideal pour verifier les formulaires avant la validations)
+}
+function TextP(e) {
+    alert('La methode preventDefault n\'enpeche pas la propagation');
+}
+
+
+
+/*BOM: Browser Object Model permet d'acceder au nivigateur nous allons utiliser l'objet windows qui represente la 
+fenetre du navigateur(on ne precise pas windows lorsque on utilise les fonction qui lui sont lie.Comme exemple)
+alert()  est une fonction windows.  windows.alert()=alert() ,windows.document.getElementById=document.getElementById car ""windows est explicite*/
+
+//Methode  OPEN :permet de ouvrir un nouveau onglet ou fenetre.Open prend 4 arguments qui sont tous facultatives sans argument open ouvrir une fenetre vide
+/*1-url de destination
+ 2- precise ou vas s'ouvrir la new page.Soit dans l'onglet courant , ou dans un autre onglet
+ 3-Liste d'elements qui vas nous permettre d'agir sur le fenetre ouverte(largeur ,hauteur...)
+ 4-booleen qui precise si la nouvelle fenetre dois remplacer la fenetre actuel ou etre ajouter a celui ci
+*/
+
+var but1=document.getElementById("but1");
+var fenetre='';
+but1.addEventListener('click',fOuvrir);
+
+function fOuvrir(){
+    fenetre=window.open("page2.html",'_blank','width=500,height=300');
+}
+
+//Methode  CLOSE :permet de ferme un  onglet ou fenetre.Close ne  prend  pas  d'arguments .
+var but2=document.getElementById("but2");
+but2.addEventListener('click',fFermer);
+
+function fFermer(){
+    fenetre.close();
+}
+
+//propriete object SCREEN:nous donnes acces a des infos sur la taille de l'ecran de nos visiteurs comme la taille ou la  resolutions
+
+var hauteur =screen.height;   //retourne la hauteur de l'ecran du visiteur
+var hauteurDispo=screen.availHeight;  //retourne la hauteur disponible(hauteur-hauteur de barre de tache) de l'ecran du visiteur
+var largeur =screen.width;   //retourne la largeur de l'ecran du visiteur
+var largeurDispo=screen.availWidth;  //retourne la hauteur disponible(hauteur-hauteur de barre de tache) de l'ecran du visiteur
+var resolution=screen.pixelDepth;
+
+var p_6=document.getElementById("p6");
+p_6.innerHTML=
+'Hauteur de l\'ecran :'+hauteur+
+'<br>Hauteur disponible :'+hauteurDispo+
+'<br>Resolution :'+resolution+'bit/px'+
+'<br>Largeur :'+largeur+
+'<br>Largeur disponible  :'+largeurDispo;
+
+
+//Objet NAVIGATEUR:Nous donnes les infos sur le navigateur de nos visiteurs
+
+var langue=navigator.language;    // retourne la langue du navigateur du visiteur
+var navigateur=navigator.appName;  // retourne la nom du navigateur du visiteur
+var version=navigator.appVersion;  // retourne la version du navigateur du visiteur
+var moteur=navigator.product;  // retourne la nom du navigateur du visiteur
+var cookieA=navigator.cookieEnabled;  // retourne la nom du navigateur du visiteur
+
+p_6.innerHTML+=
+'<br>La langue du navigateur est  :'+langue+
+'<br>Le nom du navigateur :'+navigateur+
+'<br>La version :'+version+
+'<br>Le moteur :'+moteur+
+'<br>Presence des cookies :'+cookieA;
+
+// propriete geolocalisation
+var localisation=navigator.geolocation;
+
+(function (){
+    if(localisation){
+        p_6.innerHTML+=localisation.getCurrentPosition(coordonnes);
+    }
+    else{
+        p_6.innerHTML+='<br>Localisation non disponible';
+    }
+})();
+
+function coordonnes(x){
+    p_6.innerHTML+=
+    '<br>Latitude : '+x.coords.latitude+
+    '<br>Longitude :'+x.coords.longitude;
+}
+
+
+//les  propriete Object location  retourne les element lie a l'URL de la page 
+var p_7=document.getElementById("p7");
+p_7.style.backgroundColor='red';
+const but3=document.getElementById("charger");
+const but4=document.getElementById("recharger");
+const but5=document.getElementById("changer");
+
+//on vas tester deux propriete de location
+p_7.innerHTML="bonjour";
+var url=location.href;
+var chemin=location.pathname;
+p_7.innerHTML=
+    'L\'URL est : '+url+
+    '<br>Le chemein est  :'+chemin;
+
+
+but3.addEventListener('click',Fcharge);
+but4.addEventListener('click',Frecharge);
+but5.addEventListener('click',Fchange);
+
+
+function Fcharge() {
+    location.assign('page2.html');
+}
+
+function Frecharge() {
+    location.reload();
+}
+function Fchange() {
+    // alert("Bouton cliqué !");
+    location.replace('https://wikipedia.org');
+}
+//la difference  entre recharge et replace est que avec replace on a la possibilite de revenir en arriere avec replace la page est completement modifie.
+
+
+/**/
+
+
+
