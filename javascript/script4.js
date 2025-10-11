@@ -16,6 +16,9 @@ var p_3=document.getElementById("p11");
 var p_4=document.getElementById("p12");
 var p_5=document.getElementById("p13");
 var p_6=document.getElementById("p14");
+var p_7=document.getElementById("p15");
+var p_8=document.getElementById("p16");
+
 
 /* match va retourner un tableau contenant l'expression rechercher autant de fois qu'elle a ete retrouver dans la chaine de caractere
 ou null si elle n'a pas ete retrouver*/ 
@@ -66,3 +69,10 @@ var res9=r9.exec(p_1.textContent);
 p_6.innerHTML="Resultat de la recherche de 'engagez' dans p9 avec exec : "+res9;  //retourne un tableau contenant l'expression rechercher et des infos supplementaires
 //si on ajoute le parametre g a la regex elle retourne la premiere occurence de l'expression rechercher
 
+
+
+/*Les quantificateurs et les options :Les quantificateurs sont des signes aui vont nous aider a definir une quantite d'une sequnce a recherche
++:veut dire que l'on recherche au moins une occurence*/
+var r10=/10+/g    //veut dire que je recherche l'expression "1" suivie d'un moins un  zero
+var res10=p_7.textContent.match(r10);
+p_8.innerHTML="Resultat : "+res10;
