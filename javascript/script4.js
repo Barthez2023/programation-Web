@@ -18,6 +18,7 @@ var p_5=document.getElementById("p13");
 var p_6=document.getElementById("p14");
 var p_7=document.getElementById("p15");
 var p_8=document.getElementById("p16");
+var p_9=document.getElementById("p17");
 
 
 /* match va retourner un tableau contenant l'expression rechercher autant de fois qu'elle a ete retrouver dans la chaine de caractere
@@ -75,4 +76,51 @@ p_6.innerHTML="Resultat de la recherche de 'engagez' dans p9 avec exec : "+res9;
 +:veut dire que l'on recherche au moins une occurence*/
 var r10=/10+/g    //veut dire que je recherche l'expression "1" suivie d'un moins un  zero
 var res10=p_7.textContent.match(r10);
-p_8.innerHTML="Resultat : "+res10;
+p_8.innerHTML="Resultat pour la methode '/10+/g '       : "+res10;
+
+var r11=/x+/g;    //veut dire que je recherche l'expression "x" suivie d'un moins un  x
+var res11=r11.test(p_9.textContent);
+p_8.innerHTML+="<br>Resultat pour la methode  '/x+/g'     : "+res11;
+
+var r12=/e(nd)?/g;    //veut dire que je recherche l'expression "e" suivie ou non de "nd"
+var res12=p_9.textContent.match(r12);
+p_8.innerHTML+="<br>Resultat pour la methode  '/e(nd)?/g'    : "+res12;
+
+var r13=/e$/i;    //veut dire que je recherche l'expression "e" a la fin de la chaine insensible a la casse
+var res13=r13.test(p_9.textContent);
+p_8.innerHTML+="<br>Resultat pour la methode  '/e$/i'    : "+res13;
+
+var r14=/p{2}/i;    //veut dire que je recherche l'expression "p" qui doit apparaitre au moins 2 fois de suite insensible a la casse
+var res14=r14.test(p_9.textContent);
+p_8.innerHTML+="<br>Resultat pour la methode  '/p{2}/i'       : "+res14;
+
+var r15=/java(?=script)/i;    //veut dire que je recherche l'expression "java" qui doit etre suivie de "script" insensible a la casse
+var res15=r15.test(p_9.textContent);
+p_8.innerHTML+="<br>Resultat pour la methode  '/java(?=script)/i'       : "+res15;
+
+
+
+/*Les options ou modificateur: permet d'ajouter des options a notre recherche .Im existe 3 options
+i : effectue des recherche insemsible a la casse
+g : effectue des recherche globales
+m : effectue des recherche sur plusieurs ligne elle considere chaque retour a la ligne comme fin d'une premiere ligne et debut d'une seconde ligne*/
+
+var rec1='Je suis sue \ndeux lignes en JS';
+var r16=/on/i;    //recherche  de "on" insensible a la casse
+var res16=p_9.textContent.match(r16);
+p_8.innerHTML+="<br>Resultat pour la methode  '/on/i      ': "+res16;
+
+var r17=/e/g;    //recherche  de "e" globalement
+var res17=p_9.textContent.match(r17);
+p_8.innerHTML+="<br>Resultat pour la methode  '/e/g       ': "+res17;
+
+var r18=/^d/;   //recherche  de "d" au debut de la chaine
+var res18=r18.test(rec1);
+p_8.innerHTML+="<br>Resultat pour la methode  '/^d/       ': "+res18;
+
+var r19=/^d/m;   //recherche  de "d" au debut de chaque ligne
+var res19=r19.test(rec1);
+p_8.innerHTML+="<br>Resultat pour la methode  '/^d/m       ': "+res19;
+
+
+
