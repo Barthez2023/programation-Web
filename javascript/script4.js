@@ -190,3 +190,105 @@ p_10.innerHTML+="<br>Resultat pour la methode  '/[a-zA-Z0-9]/g avec metacaracter
 var r32=/\s/g;  //recherche  de tous les espaces,tabulation,retour a la ligne globalement
 var res32=p_9.textContent.match(r32);
 p_10.innerHTML+="<br>Resultat pour la methode  '/\\s/g avec metacaractere          ': "+res32;
+
+
+
+
+/*Les formulaires en html*/
+
+var envoyer=document.getElementById("submit");
+var nom=document.getElementById("nom");
+var prenom=document.getElementById("prenom");
+var email=document.getElementById("email");
+var tel=document.getElementById("tel"); 
+var labelnom=document.getElementById("Lnom");
+var labelprenom=document.getElementById("Lprenom");
+var labelemail=document.getElementById("Lemail");
+var labeltel=document.getElementById("Ltel");
+var expresionrgulier=/^[a-zA-Zéè][a-zéè]+([-'\s][a-zA-Zéè][a-zéè]+)?/;  //expression reguliere pour la validation du formulaire
+var regexemail=/^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/; //expression reguliere pour la validation de l'email
+var regexphone=/^[0-9]{10}$/; //expression reguliere pour la validation du numero de telephone
+
+envoyer.addEventListener('click',verif);
+
+function verif(e){
+    e.preventDefault();  //empeche le comportement par defaut du bouton submit empeche l'envoi du formulaire
+    if(nom.validity.valueMissing){  //valueMissing permet de verifier si le champ est vide
+        labelnom.textContent="Le nom est Manquant";
+        labelnom.style.color="red";
+        labelnom.style.fontSize="20px";
+        document.getElementById("nom").style.border="2px solid red";
+    }
+    else if(expresionrgulier.test(nom.value)==false){  //test permet de verifier si le contenu du champ nom correspond a l'expression reguliere
+        labelnom.textContent="Format nom incorrect";
+        labelnom.style.color="orange";
+        labelnom.style.fontSize="20px";
+        document.getElementById("nom").style.border="2px solid orange";
+    }
+    else {
+    labelnom.textContent = "";
+    nom.style.border = "none";
+    }
+
+    if(prenom.validity.valueMissing){  //valueMissing permet de verifier si le champ est vide
+        labelprenom.textContent="Le prenom est Manquant";
+        labelprenom.style.color="red";
+        labelprenom.style.fontSize="20px";
+        document.getElementById("prenom").style.border="2px solid red";
+    }
+    else if(expresionrgulier.test(prenom.value)==false){  //test permet de verifier si le contenu du champ prenom correspond a l'expression reguliere
+        labelprenom.textContent="Format prenom incorrect";
+        labelprenom.style.color="orange";
+        labelprenom.style.fontSize="20px";
+        document.getElementById("prenom").style.border="2px solid orange";
+    }
+    else {
+    labelprenom.textContent = "";
+    prenom.style.border = "none";
+    }
+
+
+    if(email.validity.valueMissing){  //valueMissing permet de verifier si le champ est vide
+        labelemail.textContent="L'adresse email 'est Manquante";
+        labelemail.style.color="red";
+        labelemail.style.fontSize="20px";
+        document.getElementById("email").style.border="2px solid red";
+    }
+    else if(regexemail.test(email.value)==false){  //test permet de verifier si le contenu du champ email correspond a l'expression reguliere
+        labelemail.textContent="Format prenom incorrect";
+        labelemail.style.color="orange";
+        labelemail.style.fontSize="20px";
+        document.getElementById("email").style.border="2px solid orange";
+    }
+    else {
+    labelemail.textContent = "";
+    email.style.border = "none";
+    }
+
+
+    if(tel.validity.valueMissing){  //valueMissing permet de verifier si le champ est vide
+        labeltel.textContent="Le numero de tel  Manquant";
+        labeltel.style.color="red";
+        labeltel.style.fontSize="20px";
+        document.getElementById("tel").style.border="2px solid red";
+    }
+    else if(regexphone.test(tel.value)==false){  //test permet de verifier si le contenu du champ telcorrespond a l'expression reguliere
+        labeltel.textContent="Format tel incorrect";
+        labeltel.style.color="orange";
+        labeltel.style.fontSize="20px";
+        document.getElementById("tel").style.border="2px solid orange";
+    }
+    else {
+    labeltel.textContent = "";
+    tel.style.border = "none";
+    }
+
+    
+
+
+
+
+
+
+}
+      

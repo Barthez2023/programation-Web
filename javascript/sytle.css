@@ -1,0 +1,28 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: cadetblue;
+    width: 300px;
+    height: 420px;
+    padding: 20px;
+    font-size: 20px;
+    position: relative;
+    border-radius: 10px;
+}
+form input{
+    width: 300px;
+    height: 30px;
+}
+input[type="submit"]{
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    bottom: 10px; 
+    right: 10px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
