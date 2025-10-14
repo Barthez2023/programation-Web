@@ -7,8 +7,11 @@
 
 var canvas = document.getElementById("canvas1");
 var canvas1 = document.getElementById("canvas2");
+var canvas3 = document.getElementById("canvas3");
 var context = canvas.getContext("2d");
 var context1 = canvas1.getContext("2d");
+var context3 = canvas3.getContext("2d");
+
 
 /*on vas desiner un rectangle de couleur blue donc le bord gauche  se situe a 50 unite a droite du bord gauche du canvas */
     //context.fillStyle = "blue";
@@ -31,4 +34,29 @@ context.strokeStyle = "violet";
 context.strokeRect(250, 125, 100, 50);
 
 
-/
+/*dessiner des lignes :pour dessiner des lignes le point de depart et le point d'arrive doit etre fournir*/
+context3.strokeStyle = "violet"; //couleur de la ligne
+context3.lineWidth = 2; //epaisseur de la ligne
+context3.moveTo(0,0); //point de depart
+context3.lineTo(400, 200); //point d'arrive
+context3.lineTo(400, 0); //point d'arrive
+context3.lineTo(0, 200); //point d'arrive
+context3.stroke(); //dessiner la ligne
+
+//avec beginPath() et closePath() on peut dessiner plusieurs formes et redefinir les styles de chaque forme
+
+context3.beginPath(); //debut du dessin
+context3.strokeStyle = "blue";
+context3.lineWidth = 1;
+context3.moveTo(200, 0);
+context3.lineTo(200, 200);
+context3.stroke();  
+context3.closePath(); //fin du dessin
+
+context3.beginPath(); //debut du dessin
+context3.strokeStyle = "green";
+context3.lineWidth = 2;
+context3.moveTo(0, 100);    
+context3.lineTo(400, 100);
+context3.stroke();  
+context3.closePath(); //fin du dessin

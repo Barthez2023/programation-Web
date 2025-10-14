@@ -32,7 +32,7 @@ input[type="submit"]{
     font-size: 20px;
 }
 
-#canvas1{
+#canvas1 , #canvas3{
     /*background-color: rgb(152, 123, 6);*/
     border: 2px solid orange;
 }
