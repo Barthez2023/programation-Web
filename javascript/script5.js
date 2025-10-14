@@ -8,10 +8,11 @@
 var canvas = document.getElementById("canvas1");
 var canvas1 = document.getElementById("canvas2");
 var canvas3 = document.getElementById("canvas3");
+var canvas4 = document.getElementById("canvas4");
 var context = canvas.getContext("2d");
 var context1 = canvas1.getContext("2d");
 var context3 = canvas3.getContext("2d");
-
+var context4 = canvas4.getContext("2d");
 
 /*on vas desiner un rectangle de couleur blue donc le bord gauche  se situe a 50 unite a droite du bord gauche du canvas */
     //context.fillStyle = "blue";
@@ -60,3 +61,24 @@ context3.moveTo(0, 100);
 context3.lineTo(400, 100);
 context3.stroke();  
 context3.closePath(); //fin du dessin
+
+/*Dessiner des arcs de cercles plein ou vide*/
+context4.fillStyle = "blue"; //couleur de remplissage
+context4.beginPath(); //debut du dessin
+context4.arc(100, 75, 50, 0, Math.PI * 2, true); //x,y,radius,startAngle,endAngle,anticlockwise
+context4.fill(); //dessiner le cercle plein
+context4.closePath(); //fin du dessin
+
+context4.strokeStyle = "red"; //couleur du trait
+context4.lineWidth = 5; //epaisseur du trait    
+context4.beginPath(); //debut du dessin
+context4.arc(300, 75, 50, 0, Math.PI + (Math.PI / 2), false); //x,y,radius,startAngle,endAngle,anticlockwise
+context4.stroke(); //dessiner le cercle vide
+context4.closePath(); //fin du dessin
+
+context4.strokeStyle = "violet"; //couleur du trait
+context4.lineWidth = 2; //epaisseur du trait    
+context4.beginPath(); //debut du dessin
+context4.arc(200, 120, 50, 0,(Math.PI *2), true); //x,y,radius,startAngle,endAngle,anticlockwise
+context4.stroke(); //dessiner le cercle vide
+context4.closePath(); //fin du dessin
