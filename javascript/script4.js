@@ -283,12 +283,6 @@ function verif(e){
     tel.style.border = "none";
     }
 
-    
-
-
-
-
-
 
 }
       
