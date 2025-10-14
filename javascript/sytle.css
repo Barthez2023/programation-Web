@@ -37,5 +37,6 @@ input[type="submit"]{
     border: 2px solid orange;
 }
 #canvas2{
-    background-color: rgb(216, 20, 72);
+    background-color: rgb(78, 19, 227);
+    /* border: 2px solid orange; */
 }

@@ -19,9 +19,9 @@ var context4 = canvas4.getContext("2d");
     //context.fillRect(50, 20, 150, 70); //x,y,width,height  permet de dessiner un rectangle plein
 
 /*On vas creer un rectangle vide*/
-context1.lineWidth = 3; //epaisseur du trait
-context1.strokeStyle = "green"; //couleur du trait  
-context1.strokeRect(50, 20, 150, 70); //x,y,width,height permet de dessiner un rectangle vide
+    //context1.lineWidth = 3; //epaisseur du trait
+    //context1.strokeStyle = "green"; //couleur du trait  
+    //context1.strokeRect(50, 20, 150, 70); //x,y,width,height permet de dessiner un rectangle vide
 
 //Rectangle 1:blue ,plein et opaque
 context.fillStyle = "blue";
@@ -82,3 +82,22 @@ context4.beginPath(); //debut du dessin
 context4.arc(200, 120, 50, 0,(Math.PI *2), true); //x,y,radius,startAngle,endAngle,anticlockwise
 context4.stroke(); //dessiner le cercle vide
 context4.closePath(); //fin du dessin
+
+
+/*Creation des degrades de type lineaires et radial*/
+//degrade lineaire
+var degrade = context1.createLinearGradient(100, 50, 300, 150); //x0,y0:point de depart du degrader,x1,y1:point d'arrive du degrader
+degrade.addColorStop(0, "rgba(246, 194, 194, 0.5)");
+degrade.addColorStop(0.5, "rgba(158, 239, 204, 0.5)");
+degrade.addColorStop(1, "rgba(65, 74, 249, 0.5)");
+context1.fillStyle = degrade;
+context1.fillRect(100, 50, 200, 100);
+
+//degrade radial
+var degradeRadial = context1.createRadialGradient(200, 100, 20, 200, 100, 100); //x0,y0,r0:centre et rayon du cercle de depart,x1,y1,r1:centre et rayon du cercle d'arrive
+degradeRadial.addColorStop(0.10, "rgba(19, 21, 188, 0.5)");
+degradeRadial.addColorStop(0.55, "rgba(230, 11, 11, 0.5)");
+degradeRadial.addColorStop(1, "rgba(65, 249, 93, 0.5)");
+context3.fillStyle = degradeRadial;
+context3.arc(200, 100, 100, 0, Math.PI * 2, true);
+context3.fill(); 
