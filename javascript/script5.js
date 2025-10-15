@@ -274,3 +274,84 @@ clearTimeout(id); //arreter l'execution de la fonction
 //la fonction ne sera jamais executee
 */
 
+
+/*var btn2 = document.getElementById("btn2");
+var compteur = 0;
+var intervalId; //variable pour stocker l'identifiant de l'intervalle
+btn2.addEventListener("click", function() {
+    compteur = 0; //reinitialiser le compteur a chaque clic sur le bouton   
+    intervalId = setInterval(function() {
+        compteur++;
+        console.log("Compteur: " + compteur);   
+        if (compteur >= 5) {
+            clearInterval(intervalId); //arreter l'intervalle lorsque le compteur atteint 5
+            console.log("Intervalle arrete");
+        }
+    }, 1000); //executer la fonction chaque 1000 millisecondes(1 seconde)
+});*/
+
+btn2.addEventListener("click", function(){
+    setTimeout(function() {
+       alert("Bonjour");
+    },1000); //executer la fonction une seule fois apres 1000 millisecondes(2 secondes)
+});
+
+//cette fonction affiche un message dans une div pendant un certain delai avant de le masquer
+function showMessage(msg, duration = 2000) {
+    const messageDiv = document.getElementById("message");
+    messageDiv.textContent = msg;
+    messageDiv.style.display = "block";  // afficher le message
+
+    // masquer après duration ms
+    setTimeout(() => {
+        messageDiv.style.display = "none";
+    }, duration);
+}
+
+// Exemple d'utilisation
+showMessage("Hello ! Ce message disparaîtra après 2 seconde", 2000);
+
+/*Les cookies en Javascript*/
+/*Un cookie est un petit fichier texte stocke sur l'ordinateur de l'utilisateur par le navigateur web lorsqu'il visite un site web.Les cookies sont utilises pour stocker des informations et de pouvoir s'en resservir plus tard
+Les cookies sont utilises pour stocker des informations sur l'utilisateur, telles que les preferences de langue, les identifiants de connexion, les articles dans un panier d'achat, etc.
+Les cookies sont envoyes au serveur web a chaque fois que l'utilisateur accede a une page du site web.Les cookies sont creer pour une periode definir et l'utilisateur peut les supprimer quand il veut*/
+//Creer un cookie
+document.cookie = "username=JohnDoe; expires=Fri, 17 Oct 2025 23:59:59 GMT; path=/"; //cookie valable jusqu'au 17 octobre 2025 .Si on ne precise pas la date d'expiration le cookie sera supprimer a la fermeture du navigateur
+//le path=/ indique que le cookie est accessible pour toutes les pages du site web.
+document.cookie = "theme=dark; expires=Fri, 17 Oct 2025 23:59:59 GMT; path=/"; //cookie pour le theme sombre
+
+var c=document.cookie;
+document.getElementById("cook").innerHTML=c; //afficher les cookies dans une div
+
+
+
+/*La gestion des erreurs en JavaSript*/
+/*En Javascript, la gestion des erreurs est essentielle pour garantir la robustesse et la fiabilite du code.Les erreurs peuvent survenir pour diverses raisons, telles que des erreurs de syntaxe, des erreurs d'execution ou des erreurs logiques.
+Pour gerer les erreurs en Javascript, on utilise principalement les blocs try...catch et l'instruction throw.
+Le bloc try...catch permet de capturer les erreurs qui se produisent dans le bloc try et de les traiter dans le bloc catch.Le code a risque d'erreur est place dans le bloc try, et si une erreur se produit, l'execution passe au bloc catch ou l'erreur peut etre geree de maniere appropriee.
+L'instruction throw permet de generer une erreur personnalisee en lançant une exception.Lorsqu'une exception est lancee, l'execution du code s'arrete et l'erreur peut etre capturee par un bloc try...catch.
+Voici un exemple de gestion des erreurs en Javascript:*/
+var btn3 = document.getElementById("but1");
+
+btn3.addEventListener("click", function() {
+    var message = document.getElementById("msg");
+    var num = document.getElementById("nombre1").value;
+    try {
+        if (isNaN(num) || num.trim() === "") {
+            throw new Error("Veuillez entrer un nombre valide.");
+        }
+        else if (num < 1 || num > 10) {
+            throw new Error("Le nombre est trop petit ou trop grand.");
+        }
+        else {
+            message.style.color = "green";
+            message.innerHTML = "Le nombre " + num + " est valide.";
+        }
+    } catch (error) {
+        message.style.color = "red";
+        message.innerHTML = "Erreur: " + error.message;
+    }
+    finally {
+        document.getElementById("nombre1").value = ""; //vider le champ de saisie
+    }
+});

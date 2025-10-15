@@ -43,3 +43,16 @@ input[type="submit"]{
 #image{
     display: none;
 }
+
+#message {
+    position: fixed;
+    top: 200px;
+    right: 20px;
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    display: none; /* caché par défaut */
+    z-index: 2000;
+}
