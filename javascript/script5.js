@@ -215,8 +215,62 @@ context9.fillRect(0, 0, 75, 75); //dessiner un carre
 
 
 
+/*Gestion du delai d'execution:Utilisation des methodes setInterval(),clearInterval(),setTimeout()*/
+//setInterval():permet d'executer une fonction a intervalle de temps regulier c'est une methode de l'objet window
+//clearInterval():permet d'arreter l'execution d'une fonction appelee par setInterval()
+//setTimeout():permet d'executer une fonction une seule fois apres un delai de temps defini
+
+var heure = document.getElementById("temps");
+var tempsrell=setInterval(horloge, 1000); //appel de la fonction horloge() chaque 1000 millisecondes(1 seconde)
+var btn = document.getElementById("stop");
+function horloge() {
+    var date = new Date();
+    heure.innerHTML = date.toLocaleTimeString(); //afficher l'heure locale
+    //toLocaleTimeString():methode de l'objet Date qui retourne l'heure locale du fuseau horaire dans lequel l'on se trouve au format heure:minute:seconde
+}
+
+btn.addEventListener("click", function() {
+    clearInterval(tempsrell); //arreter l'actualisation de l'heure
+    btn.disabled = true; //desactiver le bouton
+});
+
+var btn1 = document.getElementById("btn1");
+var body= document.body;
+btn1.addEventListener("click", function() {
+    setTimeout(function() {
+        body.style.backgroundColor = "#3BA"; //changer la couleur de fond du body
+    },200); //executer la fonction une seule fois apres 200 millisecondes(2 secondes)
+
+    setTimeout(function() {
+        body.style.backgroundColor = "#4AB"; //changer la couleur de fond du body 
+    },400); //executer la fonction une seule fois apres 400 millisecondes(2 secondes)
+
+    setTimeout(function() {
+        body.style.backgroundColor = "#59B"; //changer la couleur de fond du body 
+    },600); //executer la fonction une seule fois apres 600 millisecondes(2 secondes)
+
+    setTimeout(function() {
+        body.style.backgroundColor = "#66B"; //changer la couleur de fond du body 
+    },800); //executer la fonction une seule fois apres 800 millisecondes(2 secondes)
+
+    setTimeout(function() {
+        body.style.backgroundColor = "#63B"; //changer la couleur de fond du body
+    },1000); //executer la fonction une seule fois apres 1000 millisecondes(2 secondes)
 
 
+});
+/*la methode clearTimeout() permet d'arreter l'execution d'une fonction appelee par setTimeout()
+var id = setTimeout(function, delay);
+clearTimeout(id); //id est l'identifiant du delai d'execution retourne par setTimeout()   
+clearTimeout() doit etre appelee avant l'execution de la fonction sinon elle n'aura aucun effet*/
 
 
+//exemple
+/*
+var id = setTimeout(function() {
+    console.log("Bonjour");
+}, 5000); //executer la fonction une seule fois apres 5000 millisecondes(5 secondes)    
+clearTimeout(id); //arreter l'execution de la fonction
+//la fonction ne sera jamais executee
+*/
 
