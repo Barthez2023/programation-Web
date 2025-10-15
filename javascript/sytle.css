@@ -32,11 +32,14 @@ input[type="submit"]{
     font-size: 20px;
 }
 
-#canvas1 , #canvas3 , #canvas4{
+#canvas1 , #canvas3 , #canvas4,#canvas5, #canvas6, #canvas7, #canvas8, #canvas9{
     /*background-color: rgb(152, 123, 6);*/
     border: 2px solid orange;
 }
 #canvas2{
     background-color: rgb(78, 19, 227);
     /* border: 2px solid orange; */
+}
+#image{
+    display: none;
 }
