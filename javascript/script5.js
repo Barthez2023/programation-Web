@@ -355,3 +355,15 @@ btn3.addEventListener("click", function() {
         document.getElementById("nombre1").value = ""; //vider le champ de saisie
     }
 });
+
+/*Le mode strict en Javascript*/
+/*Le mode strict est une fonctionnalite de Javascript qui permet d'adopter une approche plus rigoureuse et stricte dans l'ecriture du code.Il introduit des regles supplementaires qui aident a eviter certaines erreurs courantes et a ameliorer la qualite du code.
+Pour activer le mode strict, il suffit d'ajouter la directive "use strict"; au debut d'un script ou d'une fonction.Cette directive indique au moteur Javascript d'executer le code en mode strict.
+Voici quelques-unes des principales caracteristiques du mode strict en Javascript:  
+1. Variables non declarees: En mode strict, l'utilisation de variables non declarees provoque une erreur.ReferenceError est levee si une variable est utilisee sans etre declaree au prealable avec var, let ou const.
+2. Suppression de proprietes non configurables: En mode strict, la suppression de proprietes non configurables d'un objet provoque une erreur.TypeError est levee si on tente de supprimer une propriete qui ne peut pas etre supprimee.
+3. Mots reserves: En mode strict, certains mots sont reserves et ne peuvent pas etre utilises comme noms de variables ou de fonctions, tels que "eval" et "arguments".
+4. Mode strict pour les fonctions: En mode strict, les fonctions ne peuvent pas etre appelees avec des arguments implicites, tels que "this" ou "arguments".Cela permet d'eviter des comportements inattendus.
+5. Erreurs silencieuses: En mode strict, certaines erreurs qui seraient autrement ignorees ou silencieuses provoquent des erreurs explicites, ce qui facilite le depistage des problemes dans le code.
+Voici un exemple d'utilisation du mode strict en Javascript:*/
+"use strict"; //activer le mode strict
