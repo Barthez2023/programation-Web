@@ -56,3 +56,5 @@ input[type="submit"]{
     display: none; /* caché par défaut */
     z-index: 2000;
 }
+/*pointer-events: none; Empêche l'interaction avec le texte 
+user-select: none;  Empêche la sélection du texte */
