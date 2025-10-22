@@ -1,0 +1,101 @@
+ *{
+    box-sizing: border-box;
+    background-origin: content-box;
+    margin: 0;
+    padding: 0;
+}
+body { 
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100vW;
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+    font-size: 20px;
+    /*background-color: #121212;*/
+    background-color: #0F172A;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+   /* background-color: #1E1E1E;*/
+    background-color: #1E293B;
+    /* border: 2px solid black; */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    /* box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7), 0 0 10px rgba(255, 255, 255, 0.03); */
+    /* box-shadow: 0 0 15px rgba(99, 102, 241, 0.2); */
+    gap: 17px;
+    width: 450px;
+    justify-content: center;
+    padding: 20px;
+    color: #E0E0E0;
+    /* color: #6366F1; */
+    border-radius: 10px;
+}
+.container h1{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.calculatrice{
+    display: grid;
+    grid-template-rows: 80px 80px 80px 80px 80px;
+    grid-template-columns: 80px 80px 80px 80px;
+    gap: 20px;
+}
+#but17{
+    /*grid-row-start:5;
+    grid-row-end:6;
+    grid-column-start:1;
+    grid-column-end:3; ces 4 lignes de codes sont les meme que les deux d'en bas*/
+    grid-row: 5/6;
+    grid-column: 1/3;
+}
+.btn{
+    font-size: 30px;
+    font-weight: bolder;
+    border-radius: 50%;
+    /* background-color: hsl(222, 47%, 11%); */
+    /* background-color: hsl(223, 48%, 48%); */
+    background-color: hsl(217, 20%, 25%);
+    color: hsl(0, 0%, 95%);
+    border: none;
+}
+.btn:hover{
+    background-color: hsl(217, 20%, 30%);
+    transition: background-color 0.4s ease; /* transition douce sur la couleur */
+
+}
+.btnzero{
+    border-radius: 55px;
+    text-align: start;
+    padding-left: 30px;
+}
+.btndivise,.btnmulti,.btnegal,.btnsoustrait,.btndivise,.btnaddi{
+    background-color: hsl(35, 100%, 55%);
+    transition: background-color 0.4 ease
+}
+.btndivise:hover,.btnmulti:hover,.btnegal:hover,.btnsoustrait:hover,.btndivise:hover,.btnaddi:hover{
+    background-color: hsl(35, 100%, 40%);
+}
+.resultat{
+    display: flex;
+    justify-content: right;
+    width: 400px;
+    height: 60px;
+    padding-right:30px;
+    font-size: 60px;
+    font-weight: bolder;
+    background-color: hsl(217, 20%, 25%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+
+}
+.result{
+  text-align: center;
+}
