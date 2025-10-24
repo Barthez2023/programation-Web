@@ -96,3 +96,10 @@ body {
     background-color: rgb(179, 2, 2);
     transition:background-color 0.5s ease ;
 }
+
+#compteur{
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 1em;
+    letter-spacing: 5px;
+}

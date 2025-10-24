@@ -4,9 +4,10 @@ var Minute=document.getElementById("minute");
 var Seconde=document.getElementById("seconde");
 var Tiers=document.getElementById("tiers");
 var start=document.getElementById("start");
-var comp=document.getElementById("comp");
+var compte=document.getElementById("comp");
 var refresh=document.getElementById("refresh");
 var stopcode=document.getElementById("stop");
+var compteur=document.getElementById("compteur");
 var tiers=0;
 var seconde=0;
 var minute=0;
@@ -47,7 +48,24 @@ stopcode.addEventListener('click',fin);
 function fin() {
     clearInterval(intervalID);
 }
+refresh.addEventListener('click',reinitialise);
+function reinitialise() {
+    Tiers.innerHTML='00';
+    Hours.innerHTML='00';
+    Minute.innerHTML='00';
+    Seconde.innerHTML='00';
+    tiers=0;
+    seconde=0;
+    minute=0;
+    hours=0;
+    compteur.innerHTML="";
+}
 
+compte.addEventListener('click',affichecompte);
+
+function affichecompte(){
+    compteur.innerHTML+=hours+" : "+minute+" : "+seconde+" : "+tiers+"<br/>";
+}
 
 
 
