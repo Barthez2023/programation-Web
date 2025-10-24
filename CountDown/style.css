@@ -48,3 +48,51 @@ body {
 .time>h2{
     font-size: 70px;
 }
+.boutton{
+    display: flex;
+    gap: 60px;
+}
+.boutton>button{
+    font-size: 25px;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: bolder;
+}
+.btn1{
+    background-color: greenyellow;
+    box-shadow: 4px 5px 15px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.btn1:hover{
+    background-color: rgb(136, 222, 8);
+    transition:background-color 0.5s ease ;
+}
+.btn2{
+    background-color: blue;
+    box-shadow: 4px 5px 15px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.btn2:hover{
+    background-color: rgb(5, 5, 149);
+    transition:background-color 0.5s ease ;
+}
+.btn3{
+    background-color: gray;
+    box-shadow: 4px 5px 15px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.btn3:hover{
+    background-color: rgb(89, 88, 88);
+    transition:background-color 0.5s ease ;
+}
+.btn4{
+    background-color: red;
+    box-shadow: 4px 5px 15px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.btn4:hover{
+    background-color: rgb(179, 2, 2);
+    transition:background-color 0.5s ease ;
+}
