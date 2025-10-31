@@ -18,17 +18,28 @@
                     <i class="fa-solid fa-bars"></i>
                 </div>
             </nav>
-            <img src="img1.jpg" alt="song_iamge">
+            <img src="img1.jpg" alt="song_iamge" id="image">
             <h1>Longtemps</h1>
             <p>Amir Ft Barthez</p>
-            <audio  id="song">
-                <source src="Amir_-_Longtemps_(Clip_officiel)(128k).mp3" type="audio/mp3" title="Amir_-_Longtemps_"  value="song1">
-            </audio>
+            <audio class="music" src="Amir_-_Longtemps_(Clip_officiel)(128k).mp3"></audio>
+            <audio class="music" src="Hiro_Ft._Chidinma_-_Ton_pied,_mon_pied_(Clip_Officiel)(128k).mp3"></audio>
+            <audio class="music" src="GIMS_-_YOLO_(Clip_Officiel)(128k).mp3"></audio>
+            <audio class="music" src="Mr_Leo_-_Je_T'aime_ft._Hiro_[Official_Video]_(Music_Camerounaise)(128k).mp3" ></audio>
+            <audio class="music" src="The_Shin_Sekaï_-_Erreur_du_Passé_(_Paroles_)(128k).mp3"></audio>
+
+
+            <!-- <audio>
+                <source src="Amir_-_Longtemps_(Clip_officiel)(128k).mp3" type="audio/mp3" title="Amir_-_Longtemps_"  value="song1" class="music">
+                <source src="Hiro_Ft._Chidinma_-_Ton_pied,_mon_pied_(Clip_Officiel)(128k).mp3" type="audio/mp3" title="_Chidinma_-_Ton_pied"  value="song2" class="music">
+                <source src="GIMS_-_YOLO_(Clip_Officiel)(128k).mp3" type="audio/mp3" title="GIMS_-_YOLO_"  value="song3" class="music">
+                <source src="Mr_Leo_-_Je_T'aime_ft._Hiro_[Official_Video]_(Music_Camerounaise)(128k).mp3" type="audio/mp3" title="Mr_Leo_-_Je_T'aime"  value="song4" class="music">
+                <source src="The_Shin_Sekaï_-_Erreur_du_Passé_(_Paroles_)(128k).mp3" type="audio/mp3" title="The_Shin_Sekaï_-_Erreur_du_Passé_"  value="song5" class="music">
+            </audio> -->
             <input type="range" value="0" id="progress">
             <div class="controls">
-                <div><i class="fa-solid fa-backward"></i></div>
+                <div><i class="fa-solid fa-backward" id="backward"></i></div>
                 <div><i class="fa-solid fa-play" id="crtlsong"></i></div>
-                <div><i class="fa-solid fa-forward"></i></div>
+                <div><i class="fa-solid fa-forward" id="forward"></i></div>
             </div>
             <!-- <div class="image">
                 <img src="img3.jpg" alt="song_iamge">
