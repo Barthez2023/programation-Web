@@ -8,31 +8,47 @@ const img_icon=document.querySelector(".weather_icon");
 async function checkweater(city) {
     // const reponse = await fetch(`${apiurl}&appid=${apikey}`);
     const reponse = await fetch(apiurl + city+`&appid=${apikey}`);
-    var data=await reponse.json();
 
-    document.querySelector(".city").innerHTML=data.name;
-    document.querySelector(".temperature").innerHTML=String(parseInt(data.main.temp))+"°C"
-    document.querySelector(".humid1").innerHTML=data.main.humidity+"%";
-    document.querySelector(".wind1").innerHTML=data.wind.speed+" Km/h";
+    if (reponse.status==404){  //une ville incorrete a ete entrer
+        document.querySelector(".error").style.display="block";
+        document.querySelector(".weather").style.display="none";
+    }
+    else{
+        var data=await reponse.json();
 
-    if (data.weather[0].main=="Clouds") 
-    {
-        img_icon.src="images/clouds.png"
-    }
-    else if (data.weather[0].main=="Clear") {
-        img_icon.src="images/clear.png"
-    }
-    else if (data.weather[0].main=="Rain") {
-        img_icon.src="images/rain.png"
-    }
-    else if (data.weather[0].main=="Drizzle") {
-        img_icon.src="images/drizzle.png"
-    }
-    else if (data.weather[0].main=="Mist") {
-        img_icon.src="images/mist.png"
+        document.querySelector(".city").innerHTML=data.name;
+        document.querySelector(".temperature").innerHTML=String(parseInt(data.main.temp))+"°C"
+        document.querySelector(".humid1").innerHTML=data.main.humidity+"%";
+        document.querySelector(".wind1").innerHTML=data.wind.speed+" Km/h";
+
+        if (data.weather[0].main=="Clouds") 
+        {
+            img_icon.src="images/clouds.png"
+        }
+        else if (data.weather[0].main=="Clear") {
+            img_icon.src="images/clear.png"
+        }
+        else if (data.weather[0].main=="Rain") {
+            img_icon.src="images/rain.png"
+        }
+        else if (data.weather[0].main=="Drizzle") {
+            img_icon.src="images/drizzle.png"
+        }
+        else if (data.weather[0].main=="Mist") {
+            img_icon.src="images/mist.png"
+        }
+
+        document.querySelector(".weather").style.display="block";
+        document.querySelector(".error").style.display="none";
     }
 
-    console.log(data);
+
+
+
+    
+
+
+    //console.log(data);
 }
 /*  async function checkWeather() { ... }
     Le mot-clé async indique que la fonction va contenir du code asynchrone.
