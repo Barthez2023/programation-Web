@@ -103,3 +103,26 @@ ul li span{
 ul li span:hover{
     background-color: #edeef0;
 }
+
+/*creation d'un tooltip, info box ou speech bubble*/
+.message-box {
+  background-color: #4aa3df; /* Couleur de fond de la boite */
+  color: white; /* Couleur du texte */
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  width: max-content;
+  position: absolute;
+  top: 50px;
+  visibility: hidden;
+}
+/* Le petit triangle */
+.message-box::after {
+  content: '';
+  position: absolute;
+  top: 100%; /* place le triangle juste en dessous de la boîte */
+  left: 10px; /* ajustement horizontal */
+  border-width: 10px; /* taille du triangle */
+  border-style: solid;
+  border-color: #4aa3df transparent transparent transparent; /* triangle vers le bas */
+}

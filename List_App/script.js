@@ -3,11 +3,14 @@
 const inputBox=document.getElementById("input_box");
 const listContent=document.getElementById("list_content");
 const add=document.getElementById("add");
+const tooltip=document.getElementById("tooltip");
+
 
 add.addEventListener('click', AddToCard);
 function AddToCard(){
     if (inputBox.value==='') {
-        alert("You must write something!");
+        // alert("You must write something!");
+        visibilite();
     }
     else{
         let li=document.createElement("li");
@@ -40,3 +43,10 @@ function showtask() {
     listContent.innerHTML=localStorage.getItem("data");
 }
 showtask();
+function visibilite(){
+  tooltip.style.visibility = "visible"; // Affiche
+
+  setTimeout(() => {
+    tooltip.style.visibility = "hidden"; // Cache après 100ms
+  }, 1000);
+}
