@@ -24,7 +24,10 @@ function createpasseword(){
 
 function copypassword(){
     passwordBox.select();
-    document.execCommand("copy");
-    
+    //document.execCommand("copy");//C'est une ancienne API du DOM qui permet d'exécuter des commandes qui manipulent le contenu modifiable de la page.
+    //"copy": C'est la commande spécifique qui est exécutée. Elle ordonne au navigateur de prendre le contenu actuellement sélectionné (celui qui a été mis en surbrillance par .select()) et de le placer dans le presse-papiers du système d'exploitation.
+    //l'API asynchrone navigator.clipboard.writeText() permet de mieux effectuer cette operation de copy
+    password=passwordBox.value;
+    navigator.clipboard.writeText(password)
 }
 
