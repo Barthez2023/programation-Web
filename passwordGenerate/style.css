@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #002339;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+}
+.container{
+    width: 90%;
+    max-width: 700px;
+    /* background-color: brown; */
+    padding: 20px;
+}
+.display{
+    width: 100%;
+    margin:50px 0 30px 0;
+    background: #fff;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 10px;
+    border-radius: 5px;
+}
+.container h1{
+    font-weight: bolder;
+    font-size: 45px;
+    margin-bottom: 2px;
+}
+.container h1 span{
+    color: #019f55;
+    text-decoration: underline;
+    text-underline-offset: 10px; /* 3pxdonne un bon espace proportionnel à la taille de la police */
+    /* (Optionnel) Ajuste l'épaisseur de la ligne */
+    text-decoration-thickness: 2px;
+}
+.display img{
+    width: 20px;
+    cursor: pointer;
+}
+.display input{
+    border: none;
+    outline: none;
+    font-size: 24px;
+    font-weight: 300;
+}
+.container button img{
+    width: 20px;
+    margin-right: 10px;
+}
+.container button{
+    border: 0;
+    outline: none;
+    background-color: #019f55;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
