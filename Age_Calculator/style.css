@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: radial-gradient( circle farthest-corner at 50% 52.5%,  rgba(14,53,92,1) 0%, rgba(16,14,72,1) 90% );
+    color: #fff;
+    padding: 20px;
+}
+.calculator{
+    width: 100%;
+    max-width: 600px;
+    margin: 100px 0 0  100px ;
+}
+.container h1{
+    font-size: 60px;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
+}
+.container h1 span{
+    color: #FDEB71;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+.input-box1{
+    margin: 40px 0;
+    padding: 35px 18px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: hsl(37, 100%, 63%);
+    font-weight: 400;
+}
+.input-box{
+    display: flex;
+}
+.input-box input{
+    flex: 2;
+    margin-right: 20px;
+    padding: 14px 20px;
+    border: none;
+    outline: 0;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.input-box button {background-image: linear-gradient(to right, #ffb347 0%, #ffcc33  51%, #ffb347  100%)}
+.input-box button {
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;  
+    box-shadow: 0 0 5px #eee;
+    border-radius: 10px;
+    display: block;
+    flex: 1;
+    border: none;
+    outline: 0;
+    font-weight: bolder;
+    /* background-size: 200% auto; */
+    /* margin: 10px; */
+}
+
+.input-box button:hover{
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.input-box ::-webkit-calendar-picker-indicator {
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    position: absolute;
+    background-position: calc(100% - 10px);
+    background-size: 30px;
+    cursor: pointer;
+}
+#your-age{
+    font-size: 30px;
+}
+#your-age span{
+    color:#ffb347;;
+}
