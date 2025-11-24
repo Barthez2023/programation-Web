@@ -10,3 +10,4 @@ Google Font :Nous permet d'avoir access a des font que l'on peut telecharger te 
 
 https://github.com/lukePeavey/quotable:ce lein nous dirige vers un gitup qui a les api  pour les dayli quote
 le lien de l'api a mettre dans le js http://api.quotable.io/random
+https://developer.x.com/en/docs/x-for-websites/tweet-button/overview :permet de partager du moins d'ouvrir une page twitter 
