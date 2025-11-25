@@ -92,8 +92,42 @@ body {
  font-weight: bold;
 }
  
-
-
+button{
+    padding: 10px 15px;
+    background-color: #161a20;
+    border-radius: 1000px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+button::after{
+    content: " ";
+    position: absolute;
+    background-image: linear-gradient(to bottom right,#008cff,#e100ff);
+    height: 110%;
+    width: 104%;
+    border-radius: 1000px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rot 4s linear infinite;
+}
+/* 🔁 Animation du fond */
+@keyframes moveBorder {
+    0%{background-position: 0,0;}
+    50%{background-position: 100%,0;}
+    100%{background-position: 0,0;}
+}
+button:hover{
+    z-index: 0;
+    box-shadow: 10px 0 10px #008cff ,-10px 0 10px #e100ff ;
+}
 
 
 
