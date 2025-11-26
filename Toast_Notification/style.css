@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,97,255,1) 0%, rgba(96,239,255,1) 100.7% );
+    min-height: 100vh;
+}
+.bouttonns{
+    margin: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+
+.bouttonns button{background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%)}
+.bouttonns button{
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    transition: transform 0.5s ease-in-out;
+}
+
+.bouttonns button:hover{
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-5px);
+}
+#toastBox{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding:20px;
+}
+
+.toast{
+    width: 400px;
+    height: 80px;
+    background: #fff;
+    font-weight: bolder;
+    margin: 15px 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    position: relative;
+    transform: translateX(100%);
+    animation: moveleft 0.5s linear forwards;
+}
+.toast i{
+    margin: 0 20px;
+    font-size: 35px;
+    color: green;
+}
+.toast.error i{
+    color: red;
+}
+.toast.invalid i{
+    color: orange;
+}
+.toast::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: green;
+    animation: anim 5s linear forwards;/*linear → vitesse constante ,forwards → à la fin, l’élément garde son style final (celui du dernier keyframe dans le cas de l'animation width=0 sans foward width reprendrai sa valeur initiale)*/
+}
+.toast.invalid::after{
+    background-color: orange;
+}
+.toast.error::after{
+    background-color: red;
+}
+@keyframes anim {
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes moveleft {
+    100%{
+       transform: translateX(0);
+    }
+}

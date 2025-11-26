@@ -25,4 +25,3 @@ shake → nom de l'animation définie en dessous
 linear → vitesse constante
 10 → l'animation se répète 10 fois
 Résultat : l'élément va “trembler” rapidement pendant 1 seconde au total (0.1s × 10).*/
-
