@@ -25,3 +25,19 @@ shake → nom de l'animation définie en dessous
 linear → vitesse constante
 10 → l'animation se répète 10 fois
 Résultat : l'élément va “trembler” rapidement pendant 1 seconde au total (0.1s × 10).*/
+
+/* permet d'enlever la petite icone oeil qui apparait a la fin de saisir du champ passeword
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+input[type="password"]::-webkit-textfield-decoration-container,
+input[type="password"]::-webkit-clear-button,
+input[type="password"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+    display: none !important;
+}
+input[type="password"]::-webkit-password-toggle {
+    display: none;
+}
+*/
