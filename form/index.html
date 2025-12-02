@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <i class="fa-solid fa-paper-plane"></i>
+        <form action="" method="get">
+            <div class="nom block">
+                <label for="">Full Name</label>
+                <input type="text" placeholder="Enter your Name" id="contact-name" onkeyup="validateName()">
+                <span id="name-error"></span>
+            </div>
+            <div class="phone block">
+                <label for="">Phone No.</label>
+                <input type="tel" placeholder="123 456 7890" id="contact-phone" onkeyup="validatephone()">
+                <span id="phone-error"></span>
+            </div>
+            <div class="email block">
+                <label for="">Email Id</label>
+                <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateemail()">
+                <span id="email-error"></span>
+            </div>
+            <div class="message block">
+                <label for="">Your comment</label>
+                <textarea rows="5" cols="25" placeholder="Enter your message" id="contact-message" onkeyup="validatemessage()"></textarea>
+                <span id="message-error"></span>
+            </div>
+            <input type="submit" value="Submit">
+            <span id="submit-error"></span>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

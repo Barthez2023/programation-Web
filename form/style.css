@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    min-height: 100vh;
+    background-color: hsl(229, 44%, 14%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container form{
+    background-color: white;
+    padding: 50px 40px 40px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.container form .block{
+    display: flex;
+    padding: 10px;
+    position: relative;
+    /* background-color: aqua; */
+}
+.container form .block label{
+   font-size: 20px;
+   font-weight: bolder;
+}
+.container form .block input{
+   font-size: 20px;
+   outline: 0;
+   border: none;
+   padding-bottom: 10px;
+   border-bottom: 2px  solid gray;
+   color: hsl(0, 0%, 46%);
+}
+.container form .block textarea{
+   font-size: 20px;
+   outline: 0;
+   border: none;
+   /* padding-bottom: 10px; */
+   border-bottom: 2px  solid gray;
+   color: hsl(0, 0%, 46%);
+   resize: vertical;   /* permet d'étirer verticalement */
+}
+.container form .block input:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 5px rgba(74,144,226,0.5);
+}
+.container form .block textarea:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 5px rgba(74,144,226,0.5);
+}
+.container form .nom{
+    gap: 90px;
+}
+.container form .phone{
+    gap: 90px;
+}
+.container form .email{
+    gap: 115px;
+}
+.container form .message{
+    gap: 50px;
+}
+.container form input[type="submit"] {
+    width: 200px;
+    background: #4A90E2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in;
+    margin-top: 20px;
+}
+.container form input[type="submit"]:hover {
+    background: #357ABD;
+}
+.fa-paper-plane{
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    font-size: 26px;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container form .block span{
+    position: absolute;
+    bottom: 20px;
+    right: -30px;
+    font-size: 15px;
+    color: red;
+}
+.container form .block i{
+    color: seagreen;
+    width: 50px;
+}
+
+
+#submit-error{
+    color: red;
+}
+/*input-group==block*/
