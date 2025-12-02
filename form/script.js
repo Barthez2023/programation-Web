@@ -64,10 +64,14 @@ function validatemessage() {
 }
 
 function validateForm(){
-    if (!validateName() || !validateemail() || !validatemessage() || !validatephone()){
+    if (!validateName() ||  !validatephone() || !validateemail() || !validatemessage()){
+        submitError.style.display='block';
         submitError.innerHTML='Please fix errors before submit';
+        setTimeout(() => {
+            submitError.style.display='none';
+        }, 3000);
         return false;
-        
     }
-    
+    submitError.innerHTML = '';
+    return true;  // autorise l’envoi
 }
