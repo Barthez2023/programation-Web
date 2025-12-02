@@ -36,3 +36,38 @@ function validatephone() {
     phoneError.innerHTML='<i class="fa-solid fa-circle-check"></i>';
     return true;
 }
+function validateemail() {
+    var email=document.getElementById("contact-email").value;
+
+    if (email.length ==0) {
+        emailError.innerHTML='Eamail is required!';
+        return false;
+    } 
+    if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+        emailError.innerHTML='Email Invalid!';
+        return false;
+    }
+    emailError.innerHTML='<i class="fa-solid fa-circle-check"></i>';
+    return true;
+}
+function validatemessage() {
+    var message=document.getElementById("contact-message").value;
+    var required=30;
+    var left=required-message.length;
+
+    if (left > 0) {
+        messageError.innerHTML=left+' more characteres  required!';
+        return false;
+    } 
+    messageError.innerHTML='<i class="fa-solid fa-circle-check"></i>';
+    return true;
+}
+
+function validateForm(){
+    if (!validateName() || !validateemail() || !validatemessage() || !validatephone()){
+        submitError.innerHTML='Please fix errors before submit';
+        return false;
+        
+    }
+    
+}
