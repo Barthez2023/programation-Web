@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background: #191919;
+}
+.gallery{
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+.gallery .image{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+.gallery .image img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s ;
+    border-radius: 10px;
+}
+
+.gallery::-webkit-scrollbar{
+    display: none;
+}
+.imageGallery{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin: 10% auto;
+}
+
+#btnnext ,#btnback{
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+.gallery .image img:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.gallery .image span{
+    position: relative;
+    display: inline-block; /* important pour que span prenne la taille de l'image */
+}
+
+/*.gallery .image span::after ,.gallery .image span::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: -1;      * overlay au-dessus de l'image si besoin *
+    padding: 3px;
+    border-radius: 10px;
+    background-image: conic-gradient(#ff4545,#00ff99,#006aff,#ff0095,#ff4545);
+    
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    * Animation *
+    animation: rotateGradient 3s linear infinite;
+}
+@keyframes rotateGradient {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}*/
+/*.gallery .image span::after ,.gallery .image span::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: -1;      /* overlay au-dessus de l'image si besoin *
+    padding: 3px;
+    border-radius: 10px;
+    background: conic-gradient(from var(--angle),#ff4545,#00ff99,#006aff,#ff0095,#ff4545);
+    /* Animation *
+    animation: rotateGlow 2s linear infinite;
+}
+/*ceci permet de declarer la variable angle*
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes rotateGlow {
+    from{
+        --angle:0deg;
+    }to{
+        --angle:360deg;
+    }
+}*/
+
+
+.gallery .image span::after ,.gallery .image span::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: -1;      /* overlay au-dessus de l'image si besoin */
+    padding: 3px;
+    border-radius: 10px;
+    background: conic-gradient(from var(--angle),#ff4545,#006aff);
+    /* Animation */
+    animation: rotateGlow 3.5s linear infinite;
+}
+/*ceci permet de declarer la variable angle*/
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 53deg;
+    inherits: false;
+}
+@keyframes rotateGlow {
+    from{
+        --angle:53deg;
+    }to{
+        --angle:413deg;
+    }
+}
+
+/*.gallery .image span::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}*/
