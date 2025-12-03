@@ -49,3 +49,6 @@ function scroll(evt){
     scrollcontainer.scrollLeft+= evt.deltaY; // <-- += et pas =  evt.deltaY = valeur positive (scroll vers le bas) ou négative (scroll vers le haut) 
     //scrollLeft représente la position horizontale du scroll à l’intérieur d’un élément.
 }
+
+width: fit-content; signifie :
+"La largeur de l’élément doit s’ajuster automatiquement au contenu, sans être ni trop petite ni trop grande."
