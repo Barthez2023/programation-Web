@@ -52,3 +52,6 @@ function scroll(evt){
 
 width: fit-content; signifie :
 "La largeur de l’élément doit s’ajuster automatiquement au contenu, sans être ni trop petite ni trop grande."
+
+
+Removebg est une plateforme qui permet de retirer le background d'une image :https://www.remove.bg/
