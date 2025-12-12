@@ -10,6 +10,8 @@ body{
     background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    gap: 50px;
     justify-content: center;
     align-items: center;
 }
@@ -17,6 +19,9 @@ body{
     width: 160px;
     height: 160px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .outer{
     height: 160px;
@@ -51,6 +56,8 @@ circle{
     stroke-width: 20px;
     stroke-dasharray: 472;
     stroke-dashoffset: 472;
+}
+.anim{
     animation:  anim 2s linear forwards;
 }
 svg{
@@ -60,6 +67,72 @@ svg{
 }
 @keyframes anim{
     100%{
-        stroke-dashoffset: 165;
+        stroke-dashoffset: var(--offset);
     }
+}
+
+
+.donnees {
+    display: flex;
+    gap: 30px;
+}
+.donnees label{
+    font-size: 24px;
+}
+.donnees input{
+   padding: 10px 15px;
+   border: none;
+   outline: none;
+   border-radius: 10px;
+   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+}
+.donnees input:focus{
+   outline: 2px solid #4a90e2;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.donnees button {background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%)}
+.donnees button  {
+    padding: 10px 15px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.donnees button :hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+#error{
+    font-size: 18px;
+    font-weight: bolder;
+    color: red;
+    display: none;
+}
+
+.erreur{
+    font-size: 20px;
+    font-weight: bolder;
+    color: red;
+    display: block !important;
+    animation: shake 0.2s ease-in-out 2;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
 }
