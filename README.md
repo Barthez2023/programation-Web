@@ -55,3 +55,5 @@ width: fit-content; signifie :
 
 
 Removebg est une plateforme qui permet de retirer le background d'une image :https://www.remove.bg/
+
+Github public api's regroupe un banque des apis
