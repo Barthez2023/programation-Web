@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="product">
+            <div class="gallery">
+                <img src="image/img3.png" alt="" id="productid">
+                <div class="controls">
+                    <span class="btn active" onclick="change1(this);"></span>
+                    <span class="btn"  onclick="change2(this);"></span>
+                    <span class="btn"  onclick="change3(this);"></span>
+                </div>
+            </div>
+            <div class="details">
+                <h1>Chemise col Droit</h1>
+                <h2>$20.00</h2>
+                <h3>30% OFF</h3>
+                <p>C'est un chemise en coton garantissant le confort et la durabilite</p>
+
+                <form action="">
+                    <div class="size_select">
+                        <p>Size</p>
+                        <label for="small">
+                            <input type="radio" name="size" id="small">
+                            <span>S</span>
+                        </label>
+                        <label for="medium">
+                            <input type="radio" name="size" id="medium">
+                            <span>M</span>
+                        </label>
+                        <label for="large">
+                            <input type="radio" name="size" id="large">
+                            <span>L</span>
+                        </label>
+                        <label for="xlarge">
+                            <input type="radio" name="size" id="xlarge">
+                            <span>XL</span>
+                        </label>
+                        <label for="xxlarge">
+                            <input type="radio" name="size" id="xxlarge">
+                            <span>XXL</span>
+                        </label>
+                    </div>
+
+                    <div class="color_select">
+                        <p>Color</p>
+                        <label for="red">
+                            <input type="radio" name="color" id="red">
+                            <span class="color1"></span>
+                        </label>
+                        <label for="green">
+                            <input type="radio" name="color" id="green">
+                            <span class="color2"></span>
+                        </label>
+                        <label for="blue">
+                            <input type="radio" name="color" id="blue">
+                            <span class="color3"></span>
+                        </label>
+                        <label for="pink">
+                            <input type="radio" name="color" id="pink">
+                            <span class="color4"></span>
+                        </label>
+                    </div>
+                    <div class="qte-select">
+                        <p>Quantity</p>
+                        <input type="number" name="" id="" value="1" min="1">
+                    </div>
+
+                    <button type="submit">Buy now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
